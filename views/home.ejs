@@ -1,0 +1,19 @@
+<%- layout('layouts/header')%>
+
+<h1 class="mb-3"> Welcome to JobSearch Portal</h1>
+<div class="mb-3">
+    <a class="btn btn-primary" href="/newJob">Add a new Job vacancy</a>
+</div>
+<% for (let job of jobs){%>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-body">
+                    <h5 class="card-title"><%= job.companyname %> </h5>
+                    <p class="card-text"><%= job.description %></p>
+                    <a class="btn btn-primary" href="/jobs/<%=job._id%>">Read More..</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<% }%>

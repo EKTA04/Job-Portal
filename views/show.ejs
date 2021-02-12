@@ -1,0 +1,25 @@
+<% layout('layouts/header')%>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title"><%= job.companyname%></h5>
+                <p class="card-text"><%= job.description%></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= job.designation%></li>
+                <li class="list-group-item">Rs. <%= job.salary%> /annum</li>
+                <li class="list-group-item"><%= job.startdate%></li>
+            </ul>
+
+            
+        </div>
+    </div>
+    <div class="mb-3">
+        <a class="btn btn-success" href="/jobs/<%= job._id%>/apply"> Apply to this job.. </a>
+    </div>
+    <div class="mb-3">
+        <a class="btn btn-info" href="/"> Home Page </a>
+    </div>
+</div>

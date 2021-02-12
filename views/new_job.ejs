@@ -1,0 +1,58 @@
+<%- layout('layouts/header')%>
+
+<div class="row">
+    <h1 class="text-center">Add a new Job vacancy</h1>
+    <div class="col-6 offset-3">
+        <form action="/newJob" method="POST" class="validated-form">
+            
+            <div class="mb-3">
+                <label class="form-label" for="companyname">Company Name: </label>
+                <input class="form-control" type="text" id="companyname" name="job[companyname]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="designation">Designation: </label>
+                <input class="form-control" type="text" id="designation" name="job[designation]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Job Description: </label>
+                <textarea class="form-control" type="text" id="description" name="job[description]" required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="salary">Salary</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="salary-label">Rs.</span>
+                    <input type="text" class="form-control" id="salary" placeholder="0.00" aria-label="salary"
+                        aria-describedby="salary-label" name="job[salary]" required>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="startdate">Expected Joining Date: </label>
+                <input class="form-control" type="Date" id="startdate" name="job[startdate]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <button class="btn btn-success">Submit</button>
+            </div>
+        </form>
+        <a class="btn btn-info" href="/">Home Page</a>
+    </div>
+</div>

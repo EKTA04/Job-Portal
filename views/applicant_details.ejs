@@ -1,0 +1,26 @@
+<%- layout('layouts/header')%>
+
+<div class="row">
+    <h1 class="text-center">Please add your details</h1>
+    <div class="col-6 offset-3">
+        <form action="/jobs/<%= job._id%>/apply" method="POST" class="validated-form">
+            <div class="mb-3">
+                <label class="form-label" for="name">Name: </label>
+                <input class="form-control" type="text" id="name" name="applicant[name]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="contact">Contact Number: </label>
+                <input class="form-control" type="number" id="contact" name="applicant[contact]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" type="email" id="email" name="applicant[email]">
+            </div>
+            
+            <div class="mb-3">
+                <button class="btn btn-success">Submit</button>
+            </div>
+        </form>
+        <a class="btn btn-info" href="/">Home Page</a>
+    </div>
+</div>
